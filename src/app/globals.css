@@ -1,0 +1,165 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 25, 91%, 58%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 225, 2%, 45%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+
+    --radius: 0.5rem;
+
+    --detail-high-contrast: rgb(192, 192, 192);
+    --detail-medium-contrast: rgb(234, 234, 234);
+    --detail-low-contrast: rgb(240, 240, 242);
+
+    --text-body: rgb(54, 49, 61);
+    --text-comment: rgb(99, 94, 105);
+    --text-high-contrast: rgb(49, 49, 49);
+    --text-medium-contrast: rgb(99, 94, 105);
+    --text-low-contrast: rgb(116, 109, 118);
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+.embla {
+  margin: 0 3rem;
+
+  --slide-height: fit-content;
+  --slide-spacing: 1rem;
+  --slide-size: 100%;
+}
+.embla__viewport {
+  overflow: hidden;
+}
+.embla__container {
+  backface-visibility: hidden;
+  display: flex;
+  touch-action: pan-y pinch-zoom;
+  /* margin-left: calc(var(--slide-spacing) * -1); */
+}
+.embla__slide {
+  flex: 0 0 var(--slide-size);
+  min-width: 0;
+  /* padding-left: var(--slide-spacing); */
+}
+.embla__slide__number {
+  /* box-shadow: inset 0 0 0 0.2rem var(--detail-medium-contrast); */
+  /* 
+  font-size: 4rem;
+  font-weight: 600; */
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+  height: var(--slide-height);
+}
+.embla__controls {
+  display: flex;
+  align-items: centere;
+  justify-content: center;
+  width: 100%;
+  margin-top: 1.8rem;
+}
+
+.embla__dots {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+  margin-right: calc((2.6rem - 1.4rem) / 2 * -1);
+}
+.embla__dot {
+  -webkit-tap-highlight-color: rgba(var(--text-high-contrast-rgb-value), 0.5);
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: transparent;
+  touch-action: manipulation;
+  display: inline-flex;
+  text-decoration: none;
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  width: 2.6rem;
+  height: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+}
+.embla__dot:after {
+  /* box-shadow: inset 0 0 0 0.2rem var(--detail-medium-contrast); */
+  background-color: var(--detail-medium-contrast);
+  width: 2rem;
+  height: 0.5rem;
+  border-radius: 0.25rem;
+  display: flex;
+  align-items: center;
+  content: "";
+}
+.embla__dot--selected:after {
+  /* box-shadow: inset 0 0 0 0.2rem var(--text-body); */
+  background-color: hsl(var(--primary));
+}
