@@ -34,3 +34,16 @@ export const singleServiceQuery = groq`*[_type == "services" && slug.current == 
   description
 
 }`;
+
+//Get all category
+export const getAllCategoriesQuery = groq`*[_type == "category"] {
+  _id,
+  title,
+  slug,
+  image {
+    asset-> {
+      _id,
+      url
+    }
+  }
+}`;

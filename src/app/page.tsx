@@ -9,6 +9,7 @@ import ContactUs from "@/components/contact-us";
 import ServicesPage from "./services/page";
 import EMICalculatorHome from "@/components/emi-calculator";
 import Partners from "@/components/partners";
+import Categories from "@/components/categories";
 
 export default function Home() {
   return (
@@ -16,7 +17,7 @@ export default function Home() {
       <div className="max-w-7xl mx-auto mt-6 flex flex-col gap-10  sm:gap-16 lg:gap-20">
         <EmblaCarousel />
         <Stats />
-        <ServicesPage />
+        <Categories />
         <CompanyProfile />
 
         <Partners />
