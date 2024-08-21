@@ -6,8 +6,7 @@ import HowItWorks from "@/components/how-it-works";
 import Testimonials from "@/components/testimonials";
 
 import ContactUs from "@/components/contact-us";
-import ServicesPage from "./services/page";
-import EMICalculatorHome from "@/components/emi-calculator";
+
 import Partners from "@/components/partners";
 import Categories from "@/components/categories";
 

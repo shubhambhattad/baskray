@@ -27,13 +27,11 @@ export const servicesQuery = groq`*[_type == "services"] {
  metaDesc,
 }`;
 
-export const singleServiceQuery = groq`*[_type == "services" && slug.current == $slug][0] {
-  title,
-  slug,
-  "imageURL": mainImage.asset->url,
-  description
+export const productPathsQuery = groq`*[_type == "product" && defined(slug.current)][]{
+    "params": { "slug": slug.current }
+  }`;
 
-}`;
+export const singleProduct = groq`*[_type == "product" && slug.current == $product_slug][0]`;
 
 //Get all category
 export const getAllCategoriesQuery = groq`*[_type == "category"] {

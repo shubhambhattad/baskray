@@ -11,7 +11,6 @@ import { RichTextComponent } from "./RichTextComponent";
 const builder = imageUrlBuilder(client);
 
 const Post = ({ post }: { post: SanityDocument }) => {
-  console.log("post", post);
   const convertDate = (date: string) => {
     return new Date(date).toLocaleDateString("en-GB", {
       day: "numeric",

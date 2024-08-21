@@ -22,18 +22,22 @@ export default {
     {
       name: "description",
       title: "Description",
-      type: "text",
+      type: "blockContent",
       validation: (Rule: any) => Rule.required().min(5).max(500),
     },
-
     {
-      name: "image",
-      title: "Image",
-      type: "image",
-      options: {
-        hotspot: true,
-      },
-      validation: (Rule: any) => Rule.required(),
+      name: "images",
+      title: "Images",
+      type: "array",
+      of: [
+        {
+          type: "image",
+          options: {
+            hotspot: true,
+          },
+        },
+      ],
+      validation: (Rule: any) => Rule.required().min(1),
     },
   ],
 };

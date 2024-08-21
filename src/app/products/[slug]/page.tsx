@@ -26,12 +26,18 @@ const Page = async ({ params }: { params: { slug: string } }) => {
         url: string;
       };
     };
+    slug: {
+      current: string;
+    };
     products: ProductData[];
   }
 
   const categoryData = await sanityFetch<CategoryData>({
     query: `*[_type == "category" && slug.current == $slug][0] {
       _id,
+      slug{
+      current
+      },
       title,
       image {
         asset-> {
@@ -60,7 +66,6 @@ const Page = async ({ params }: { params: { slug: string } }) => {
   if (!categoryData) {
     return <div>Category not found</div>;
   }
-  console.log("Product Data2:", categoryData);
 
   // Extract products from the fetched category data
   const products = categoryData?.products || [];
@@ -72,7 +77,11 @@ const Page = async ({ params }: { params: { slug: string } }) => {
       </h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {products.map((product: any) => (
-          <Product key={product._id} product={product} />
+          <Product
+            key={product._id}
+            product={product}
+            category={categoryData.slug.current}
+          />
         ))}
       </div>
     </div>
