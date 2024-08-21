@@ -20,6 +20,6 @@ export async function sanityFetch<QueryResponse>({
   return client
     .withConfig({ useCdn: true })
     .fetch<QueryResponse>(query, params, {
-      cache: isDevelopment ? undefined : "force-cache",
+      cache: isDevelopment ? undefined : "no-store",
     });
 }
