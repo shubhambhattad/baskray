@@ -9,6 +9,7 @@ import ContactUs from "@/components/contact-us";
 
 import Partners from "@/components/partners";
 import Categories from "@/components/categories";
+import { Blogs } from "@/components/blogs";
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
         <CompanyProfile />
 
         <Partners />
+        <Blogs />
         <HowItWorks />
         <Testimonials />
         <ContactUs />

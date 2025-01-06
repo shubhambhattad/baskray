@@ -1,7 +1,7 @@
 import { groq } from "next-sanity";
 
 // Get all posts
-export const postsQuery = groq`*[_type == "post"] {
+export const postsQuery = groq`*[_type == "post"] | order(publishedAt desc) {
   _createdAt,
   title,
   slug,
@@ -45,3 +45,18 @@ export const getAllCategoriesQuery = groq`*[_type == "category"] {
     }
   }
 }`;
+
+export const blogsQuery = groq`
+          *[_type == "post"] | order(publishedAt desc) [0...5] {
+            title,
+            "slug": slug.current,
+            metaDesc,
+            mainImage {
+              asset-> {
+                url
+              },
+              alt
+            },
+            publishedAt
+  }
+`;

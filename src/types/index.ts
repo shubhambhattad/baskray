@@ -102,3 +102,16 @@ export type {
 };
 
 export { initialState };
+
+export interface BlogPost {
+  title: string;
+  slug: string;
+  metaDesc: string;
+  mainImage: {
+    asset: {
+      url: string;
+    };
+    alt: string;
+  };
+  publishedAt: string;
+}
