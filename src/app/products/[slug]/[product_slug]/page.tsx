@@ -35,12 +35,14 @@ const Page = async ({ params }: { params: { product_slug: string } }) => {
   return (
     <div className="container mx-auto my-10 flex flex-col md:flex-row gap-8">
       <div className="w-full md:w-1/2">
-        <ProductCarousel
-          images={product.images}
-          title={product.title}
-          description={product.description}
-          price={99.99} // Replace with the actual product price
-        />
+        {product.images && (
+          <ProductCarousel
+            images={product.images}
+            title={product.title}
+            description={product.description}
+            price={99.99} // Replace with the actual product price
+          />
+        )}
       </div>
       <div className="w-full md:w-1/2">
         <div className="p-6">

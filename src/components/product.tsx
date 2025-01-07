@@ -55,7 +55,7 @@ const Product = ({ product, category }: ProductProps) => {
           transition={{ duration: 0.5, delay: 0.6 }}
         >
           <Link href={`${category}/${product.slug.current}`}>
-            <Button size="sm">Order Now</Button>
+            <Button size="sm">Enquire Now</Button>
           </Link>
         </motion.div>
       </div>
