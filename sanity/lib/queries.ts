@@ -60,3 +60,11 @@ export const blogsQuery = groq`
             publishedAt
   }
 `;
+
+export const partnersQuery = groq`
+  *[_type == "partner"] | order(order asc) {
+    _id,
+    name,
+    "logoUrl": logo.asset->url
+  }
+`;
