@@ -37,20 +37,20 @@ const CompanyProfile = () => {
           </div>
 
           <div className="2xl:pl-16">
-            <h2 className="text-3xl font-bold leading-tight text-primary sm:text-4xl lg:text-5xl lg:leading-tight">
+            <h2 className="text-3xl font-bold leading-tight text-primary sm:text-4xl lg:text-5xl lg:leading-tight uppercase">
               Who We Are
             </h2>
             <p className="text-base leading-relaxed text-gray-900 mt-9">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit harum
-              temporibus molestias dolores fuga ipsa, distinctio rem eveniet
-              quas quo aspernatur, ducimus itaque sequi numquam eius officia
-              praesentium laudantium. Reiciendis.
+              We&apos;re a leading nutraceutical manufacturing facility committed to
+              crafting premium, science-backed supplements that fuel healthier
+              lives. With cutting-edge technology and stringent quality controls,
+              we partner with global brands to deliver innovative health solutions
+              that meet the highest standards of purity, potency, and efficacy.
             </p>
             <p className="mt-6 text-base leading-relaxed text-gray-900">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Perferendis sapiente modi, esse laborum commodi beatae sunt
-              pariatur magni voluptas quibusdam, perspiciatis, nobis placeat
-              dolore error rerum. Illum repellendus in quas.
+              Our facility adheres to stringent international standards, including
+              HACCP, USFDA, HALAL, and ISO 22000:2018, ensuring the highest levels
+              of quality, safety, and compliance. Backed by a dedicated R&D team.
             </p>
             <Link href="/about-us">
               <Button className="mt-4">Know More</Button>

@@ -15,7 +15,7 @@ export default function AboutUs() {
       <Mission />
       <Stats />
       <Capabilities />
-      <Directors />
+      {/* <Directors /> */}
       <Certifications />
     </div>
   );
@@ -71,7 +71,7 @@ function Mission() {
               <h3 className="text-2xl font-bold text-yellow-700">Mission</h3>
             </div>
             <p className="text-gray-600">
-              To enhance the quality of life by providing over 600 specialized
+              To enhance the quality of life by providing over 100+ specialized
               nutraceutical solutions tailored to meet the diverse health needs
               of individuals. We are dedicated to producing safe, effective, and
               innovative products that support specific wellness goals,
@@ -111,9 +111,9 @@ function Stats() {
           Our Impact
         </h2>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-          <StatCard title="Products Delivered" value={1000000} suffix="+" />
-          <StatCard title="Clients Served" value={500} suffix="+" />
-          <StatCard title="Product Variations" value={600} suffix="+" />
+          <StatCard title="Products Delivered" value={100} suffix="+" />
+          <StatCard title="Clients Served" value={50} suffix="+" />
+          <StatCard title="Product Variations" value={150} suffix="+" />
           <StatCard title="Employees" value={40} suffix="+" />
         </div>
       </div>
@@ -164,19 +164,7 @@ function Capabilities() {
       description:
         "Our high-quality tablet manufacturing process ensures precise dosage and consistent potency. We produce tablets for a wide range of health benefits, including immunity support, bone health, and overall wellness.",
       icon: "💊",
-    },
-    {
-      name: "Liquids",
-      description:
-        "We specialise in the production of liquid nutraceuticals that provide fast-absorbing, easy-to-consume options. Our liquid products can be customised with various flavours and concentrations to suit different consumer preferences.",
-      icon: "🧪",
-    },
-    {
-      name: "Capsules",
-      description:
-        "Our encapsulated products are designed for optimal bioavailability and ease of use. We offer custom formulations, including herbal extracts, vitamins, minerals, and probiotics, tailored to meet specific health needs.",
-      icon: "💊",
-    },
+    }
   ];
 
   return (
@@ -363,24 +351,20 @@ function Directors() {
 
 function Certifications() {
   const certificates = [
-    "FSSAI",
-    "GST",
-    "GMP",
-    "ISO 9001:2015",
-    "Labour License",
-    "DISH License (Plant Layout Approval and Factory)",
+    "FSSAI and GST",
+    "Compliance certification- WHO GMP, USFDA, HACCP, HALAL, ISO 22000:2018",
   ];
 
   return (
     <section className="py-20 bg-yellow-50">
       <div className="container mx-auto px-4">
         <motion.h2
-          className="text-4xl font-bold mb-10 text-center text-gray-800"
+          className="text-4xl font-bold mb-10 text-center text-gray-800 uppercase"
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          Our Certifications
+          Our Certification
         </motion.h2>
         <div className="flex flex-wrap justify-center gap-6">
           {certificates.map((cert, index) => (

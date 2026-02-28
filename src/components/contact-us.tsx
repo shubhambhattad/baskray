@@ -11,7 +11,7 @@ const ContactUs = () => {
         <div className=" px-4 py-8 sm:px-6 lg:px-8 ">
           <div className="mb-4">
             <div className="mb-6 text-center sm:text-center md:mx-auto md:mb-12">
-              <Heading title="Get in Touch" />
+              <Heading title="GET IN TOUCH" />
             </div>
           </div>
           <div className="flex items-stretch justify-center ">
@@ -41,10 +41,10 @@ const ContactUs = () => {
                         Our Office
                       </h3>
                       <p className="text-gray-600 dark:text-slate-400">
-                        Third Floor, abc colony
+                        212, GRAND HORIZON, NEXT TO HOTEL BRAHMA,
                       </p>
                       <p className="text-gray-600 dark:text-slate-400">
-                        Balgandharav, Shivajinagar, Pune
+                        MANIKBAG, SINHGAD ROAD, PUNE 411041
                       </p>
                     </div>
                   </li>
@@ -72,7 +72,7 @@ const ContactUs = () => {
                         Call Us
                       </h3>
                       <p className="text-gray-600 dark:text-slate-400">
-                        +91 982267858558
+                        7745040808, 95456266866, 8329732693
                       </p>
                     </div>
                   </li>
@@ -96,10 +96,10 @@ const ContactUs = () => {
                     </div>
                     <div className="ml-4 mb-4">
                       <h3 className="mb-2 text-lg font-medium leading-6 text-gray-900 dark:text-white">
-                        Mail Us:
+                        Mail Id
                       </h3>
                       <p className="text-gray-600 dark:text-slate-400">
-                        abc@gmail.com
+                        infobaskray@gmail.com
                       </p>
                     </div>
                   </li>
@@ -166,20 +166,15 @@ const ContactUs = () => {
       <section className="bg-gray-100 mx-auto max-w-5xl py-8">
         <div className="px-4 sm:px-6 lg:px-8">
           <div className="mb-6 text-center">
-            <Heading title="Our Location" />
+            <Heading title="OUR LOCATION" />
           </div>
           <div className="relative w-full h-0 pb-[56.25%] rounded-lg overflow-hidden shadow-lg">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1c2c1388aad611d%3A0xb4b05cb651fbf927!2sS%20B%%20Consulting!5e0!3m2!1sen!2sin!4v1721928417006!5m2!1sen!2sin"
+              src="https://maps.google.com/maps?q=18.346474,73.866333&z=15&output=embed"
               className="absolute top-0 left-0 w-full h-full border-0"
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
             ></iframe>
-          </div>
-          <div className="mt-4 text-center text-gray-600">
-            <p>
-              Visit us at our office to discuss your financial needs in person.
-            </p>
           </div>
         </div>
       </section>

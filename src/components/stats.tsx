@@ -15,7 +15,7 @@ const Stats = () => {
             <h3 className="font-bold text-7xl">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-600 to-blue-600">
                 {" "}
-                <NumberTicker value={10} />
+                <NumberTicker value={1} />
               </span>
             </h3>
             <p className="mt-4 text-xl font-medium text-gray-900">
@@ -29,20 +29,20 @@ const Stats = () => {
           <div>
             <h3 className="font-bold text-7xl">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-600 to-blue-600">
-                <NumberTicker value={4821} />
+                <NumberTicker value={75} />
               </span>
             </h3>
             <p className="mt-4 text-xl font-medium text-gray-900">
               Projects delivered
             </p>
-            <p className="text-base mt-0.5 text-gray-500">In last 6 years</p>
+            <p className="text-base mt-0.5 text-gray-500">In last 1 years</p>
           </div>
 
           <div>
             <h3 className="font-bold text-7xl">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-600 to-blue-600">
                 {" "}
-                <NumberTicker value={85} />
+                <NumberTicker value={40} />
               </span>
             </h3>
             <p className="mt-4 text-xl font-medium text-gray-900">
