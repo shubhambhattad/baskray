@@ -3,58 +3,47 @@ import { Button } from "./ui/button";
 
 const CompanyProfile = () => {
   return (
-    <section className=" bg-white ">
+    <section className="bg-gradient-to-b from-white to-orange-50/30 py-16 lg:py-24">
       <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
-        <div className="grid items-center grid-cols-1 lg:grid-cols-2 gap-x-12 xl:gap-x-24 gap-y-12">
-          <div className="relative lg:mb-12">
-            <img
-              className="absolute -right-0 -bottom-8 xl:-bottom-12 xl:-right-4"
-              src="https://cdn.rareblocks.xyz/collection/celebration/images/content/3/dots-pattern.svg"
-              alt=""
-            />
-            <div className="pl-12 pr-6">
+        <div className="grid items-center grid-cols-1 lg:grid-cols-2 gap-x-16 gap-y-16">
+          <div className="relative group">
+            <div className="absolute -inset-4 bg-primary/10 rounded-[2rem] blur-2xl group-hover:bg-primary/20 transition-all duration-500" />
+            <div className="relative overflow-hidden rounded-2xl shadow-2xl transition-transform duration-500 hover:scale-[1.02]">
               <img
-                className="relative"
-                src="https://cdn.rareblocks.xyz/collection/celebration/images/content/3/girl-working-on-laptop.jpg"
-                alt=""
+                className="w-full h-full object-cover"
+                src="/banner.jpg"
+                alt="Bask Ray Manufacturing Facility"
               />
             </div>
-            <div className="absolute left-0 pr-12 bottom-8 xl:bottom-20">
-              <div className="max-w-xs bg-orange-500 rounded-lg sm:max-w-md xl:max-w-md">
-                <div className="px-3 py-4 sm:px-5 sm:py-8">
-                  <div className="flex items-start">
-                    <p className="text-3xl sm:text-4xl">👋</p>
-                    <blockquote className="ml-5">
-                      <p className="text-sm font-medium text-white sm:text-lg">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        ”
-                      </p>
-                    </blockquote>
-                  </div>
-                </div>
-              </div>
-            </div>
+
+            {/* Subtle floating accent */}
+            <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-primary/10 rounded-full blur-3xl" />
+            <div className="absolute -top-6 -left-6 w-32 h-32 bg-orange-200/20 rounded-full blur-3xl" />
           </div>
 
-          <div className="2xl:pl-16">
-            <h2 className="text-3xl font-bold leading-tight text-primary sm:text-4xl lg:text-5xl lg:leading-tight uppercase">
-              Who We Are
-            </h2>
-            <p className="text-base leading-relaxed text-gray-900 mt-9">
-              We&apos;re a leading nutraceutical manufacturing facility committed to
-              crafting premium, science-backed supplements that fuel healthier
-              lives. With cutting-edge technology and stringent quality controls,
-              we partner with global brands to deliver innovative health solutions
-              that meet the highest standards of purity, potency, and efficacy.
-            </p>
-            <p className="mt-6 text-base leading-relaxed text-gray-900">
-              Our facility adheres to stringent international standards, including
-              HACCP, USFDA, HALAL, and ISO 22000:2018, ensuring the highest levels
-              of quality, safety, and compliance. Backed by a dedicated R&D team.
-            </p>
-            <Link href="/about-us">
-              <Button className="mt-4">Know More</Button>
-            </Link>
+          <div className="lg:pl-8">
+
+            <div className="space-y-6 text-lg leading-relaxed text-gray-600">
+              <p>
+                Incorporated on April 19, 2024, <span className="font-semibold text-gray-900">Bask Ray</span> is a visionary nutraceutical company dedicated to delivering premium-quality nutraceutical products across both domestic and international markets.
+              </p>
+
+              <p>
+                The name “Bask Ray” is inspired by the Sanskrit word <span className="text-primary font-medium">“Bhaskar”</span>, meaning Sun — a symbol of life, energy, and rejuvenation. Together, it represents our core philosophy: To illuminate lives through innovations as pure and powerful as sunlight.
+              </p>
+
+              <p>
+                As we build our presence in the wellness space, we aspire to become a trusted global partner, known for our integrity, innovation, and unwavering dedication to excellence.
+              </p>
+            </div>
+
+            <div className="mt-12 flex flex-wrap gap-4">
+              <Link href="/about-us">
+                <Button size="lg" className="px-8 py-6 text-lg rounded-xl shadow-lg hover:shadow-primary/30 transition-all">
+                  Know More
+                </Button>
+              </Link>
+            </div>
           </div>
         </div>
       </div>

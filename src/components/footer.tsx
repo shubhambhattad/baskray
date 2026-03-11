@@ -19,9 +19,9 @@ const Footer = () => {
             />
 
             <p className="text-base leading-relaxed text-gray-600 mt-7">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Voluptates doloribus nobis esse assumenda sit sunt consequuntur
-              libero quod
+              Bask Ray is a visionary nutraceutical company dedicated to
+              delivering premium-quality products inspired by the healing power
+              of light and nature, guided by science and empowered by quality.
             </p>
           </div>
 
